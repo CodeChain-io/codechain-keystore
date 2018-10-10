@@ -33,5 +33,5 @@ export async function createContext(params: {
 }
 
 export async function closeContext(context: Context): Promise<void> {
-    return Promise.resolve();
+    return Promise.resolve(context.db.write());
 }
